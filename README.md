@@ -9,8 +9,8 @@ Which will be useful in future also.</p>
 <li>Find costfunction</li>
 <li>Train and test</li>
 <li>Predict</li></ol>
-<p>We are going to use logistic regression in this project.</p>
-<p>We did complete ordinal encoding.</p>
-<p>Till now we have used feature scaling using mean normalization method so that it will help us in gradient descent and cost function analysis too.<p>
+<p>Usage logistic regression in this project.</p>
+<p>Ordinal encoding for input parameters.</p>
+<p>Feature scaling will help in calculating the gradient descent and will help in cost function analysis too.<p>
 
 <h4>View our python file for better interpretation</h4>
