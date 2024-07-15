@@ -12,3 +12,4 @@ Which will be useful in future also.</p>
 <p>We did complete ordinal encoding.</p>
 <p>Till now we have used feature scaling using mean normalization method so that it will help us in gradient descent and cost function analysis too.<p>
 
+<h4>View our python file for better interpretation</h4>
