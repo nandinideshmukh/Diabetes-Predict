@@ -5,6 +5,7 @@ Which will be useful in future also.</p>
 <br><br>
 <ol>The steps are as follows:
 <li>Use parameters </li>
+<li>Data pre-processing (helping us which model to use)</li>
 <li>Regularization of dataset</li>
 <li>Find costfunction</li>
 <li>Train and test</li>
