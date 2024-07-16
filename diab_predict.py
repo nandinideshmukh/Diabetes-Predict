@@ -93,5 +93,13 @@ for columns in (columns_to_plot):
 
 #next we'll train the data
 target = handled_data['diabetes']
-X_train ,X_test , Y_train,y_test = train_test_split(handled_data,target,test_size=0.2)
+X_train ,X_test , Y_train,Y_test = train_test_split(handled_data,target,test_size=0.2)
+
+rc = RandomForestClassifier(n_estimators=50)
+rc.fit(X_train,Y_train)
+pred = rc.predict(X_test)
+fpr ,tpr ,thresholds = roc_curve(Y_test,pred)
+area = auc(fpr,tpr)
+print(area*100)
+
 
