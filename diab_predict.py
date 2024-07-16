@@ -90,13 +90,12 @@ sns.heatmap(handled_data.corr(),annot=True)
 plt.show()
 
 # #this may tell us to use logistic regression and feature selection too
-# sns.pairplot(data=handled_data,x=['age','hypertension','heart_disease','bmi','HbA1c_level','new_bgl','smoking_history_encoded','gender_encoded','Pregnancies','Insulin','DiabetesPedigreeFunction'],y=['diabetes'],kde=True)
-# plt.show()
+sns.pairplot(data=handled_data,x=['age','hypertension','heart_disease','bmi','HbA1c_level','new_bgl','smoking_history_encoded','gender_encoded','Pregnancies','Insulin','DiabetesPedigreeFunction'],y=['diabetes'],kde=True)
+plt.show()
 
 #parameters that affect the count too much can be given more importance in the data
 #use different plots so that there is no overlapping and better understanding
 #based on these results , elimination of features
-
 columns_to_plot = ['age','hypertension','heart_disease','bmi','HbA1c_level','new_bgl','smoking_history_encoded','gender_encoded','Pregnancies','Insulin','DiabetesPedigreeFunction']
 
 for columns in (columns_to_plot):
