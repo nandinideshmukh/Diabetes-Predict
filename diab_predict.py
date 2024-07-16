@@ -49,18 +49,6 @@ del data['blood_glucose_level']
 print(data)
 print(data2)
 
-#find cost function and do gradient descent for minimizing the error
-E = np.array(data['HbA1c_level'])
-A= np.array(data['age'])
-B= np.array(data['bmi'])
-C = np.array(data['hypertension'])
-D= np.array([data['new_bgl']])
-
-Y = np.array(data['diabetes'])
-
-def sigmoid(z):
-    return 1/(1+np.exp(-z))
-
 #merging data
 data2.rename(columns={'Age':'age'},inplace=True)
 data3 = pd.merge(data,data2,on='age',how='inner')
