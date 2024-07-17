@@ -4,10 +4,10 @@
 Which will be useful in future also.</p>
 <br><br>
 <ol>The steps are as follows:
+<li>Collecting data</li>
 <li>Use parameters </li>
 <li>Data pre-processing (helping us which model to use)</li>
-<li>Regularization of dataset</li>
-<li>Find costfunction</li>
+<li>Random Forest is efficient algorithm.</li>
 <li>Train and test</li>
 <li>Predict</li></ol>
 <p>Usage of Random Forest in this project.</p>
