@@ -7,7 +7,7 @@ Which will be useful in future also.</p>
 <li>Collecting data</li>
 <li>Use parameters </li>
 <li>Data pre-processing (helping us which model to use)</li>
-<li>Random Forest is efficient algorithm.</li>
+<li>Random Forest is efficient algorithm for diabetes prediction.</li>
 <li>Train and test</li>
 <li>Predict</li></ol>
 <p>Usage of Random Forest in this project.</p>
@@ -18,3 +18,11 @@ Which will be useful in future also.</p>
 <p>Plotting histograms and eliminating features based on that graph.</p>
 
 <h4>View our python file for better interpretation</h4>
+
+<h2>Changes we are going to make in the project are as follows:</h2>
+<ol>
+  <li>Merging more than one column of datasets for more accuracy.</li>
+  <li>Then again drop out some features and test the code.</li>
+  <li>The code uploaded right now has 99.66% efficiency (more features dropped out).</li>
+  <li>So introducing more features again.</li>
+</ol>
