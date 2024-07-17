@@ -5,6 +5,7 @@ import seaborn as sns
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import OrdinalEncoder
+from sklearn.metrics import roc_curve,auc
 
 #uploading the dataset
 data = pd.read_csv("diabetes_prediction_dataset.csv")
@@ -36,6 +37,8 @@ print(x_train , y_train)
 
 data[['smoking_history_encoded','gender_encoded']] = x_encoded
 data.drop(['smoking_history','gender'] , inplace=True , axis=1)
+data.drop(['hypertension'],inplace=True,axis=1)
+
 # print(data)
 
 #this is for feature scaling of blood glucose level which will help us in gradient descent
@@ -53,7 +56,6 @@ print(data2)
 data2.rename(columns={'Age':'age'},inplace=True)
 data3 = pd.merge(data,data2,on='age',how='inner')
 data3.drop(['Outcome'],inplace=True,axis=1)
-data3.drop(['BloodPressure'],inplace=True,axis=1)
 data3.drop(['SkinThickness'],inplace=True,axis=1)
 print(data3)
 
@@ -78,28 +80,28 @@ sns.heatmap(handled_data.corr(),annot=True)
 plt.show()
 
 # #this may tell us to use logistic regression and feature selection too
-sns.pairplot(data=handled_data,x=['age','hypertension','heart_disease','bmi','HbA1c_level','new_bgl','smoking_history_encoded','gender_encoded','Pregnancies','Insulin','DiabetesPedigreeFunction'],y=['diabetes'],kde=True)
-plt.show()
+# sns.pairplot(data=handled_data,x=['age','hypertension','heart_disease','bmi','HbA1c_level','new_bgl','smoking_history_encoded','gender_encoded','Pregnancies','Insulin','DiabetesPedigreeFunction'],y=['diabetes'],kde=True)
+# plt.show()
 
 #parameters that affect the count too much can be given more importance in the data
 #use different plots so that there is no overlapping and better understanding
 #based on these results , elimination of features
-columns_to_plot = ['age','hypertension','heart_disease','bmi','HbA1c_level','new_bgl','smoking_history_encoded','gender_encoded','Pregnancies','Insulin','DiabetesPedigreeFunction']
 
-for columns in (columns_to_plot):
-    sns.histplot(handled_data[columns] , kde=True)
-    plt.title(f'Histogram of {columns}')
-    plt.show()
+columns_to_plot = ['age','BloodPressure','heart_disease','bmi','HbA1c_level','new_bgl','smoking_history_encoded','gender_encoded','Pregnancies','Insulin','DiabetesPedigreeFunction']
+
+# for columns in (columns_to_plot):
+#     sns.histplot(handled_data[columns] , kde=True)
+#     plt.title(f'Histogram of {columns}')
+#     plt.show()
 
 #next we'll train the data
 target = handled_data['diabetes']
-X_train ,X_test , Y_train,Y_test = train_test_split(handled_data,target,test_size=0.2)
+X_train ,X_test , Y_train,Y_test = train_test_split(handled_data.drop('diabetes', axis=1),target,test_size=0.2)
 
 rc = RandomForestClassifier(n_estimators=50)
 rc.fit(X_train,Y_train)
-pred = rc.predict(X_test)
+pred = rc.predict_proba(X_test)[:, 1]
 fpr ,tpr ,thresholds = roc_curve(Y_test,pred)
 area = auc(fpr,tpr)
 print(area*100)
-
 
