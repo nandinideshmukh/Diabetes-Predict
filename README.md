@@ -20,6 +20,7 @@ Which will be useful in future also.</p>
 <h4>View our python file for better interpretation</h4>
 
 <h2>Changes we are going to make in the project are as follows:</h2>
+<h3>Handling data properly</h3>
 <ol>
   <li>Merging more than one column of datasets for more accuracy.</li>
   <li>Then again drop out some features and test the code.</li>
