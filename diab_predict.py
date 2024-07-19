@@ -78,6 +78,12 @@ print("Handled data is: ",handled_data)
 #if missing values are filled or not
 print("Number of null values in handled data is: ",handled_data.isna().sum())
 
+#Data3 correlation
+plt.figure(figsize=(12, 8))  
+sns.heatmap(data3.corr(),annot=True)
+plt.title("Data 3 co-relation")
+plt.plot()
+
 #useful feature-selection
 #pregnancy is a major feature for this
 sns.heatmap(data2.corr(),annot=True)
@@ -85,7 +91,7 @@ plt.title("Data 2 co -relation")
 plt.show()
 
 sns.heatmap(handled_data.corr(),annot=True)
-plt.title("Data 1 co-relation")
+plt.title("Handled data co-relation")
 plt.show()
 
 # #this may tell us to use logistic regression and feature selection too
@@ -96,12 +102,12 @@ plt.show()
 #use different plots so that there is no overlapping and better understanding
 #based on these results , elimination of features
 
-columns_to_plot = ['age','Hypertension','heart_disease','bmi','HbA1c_level','blood_glucose_level','smoking_history_encoded','gender_encoded','Pregnancies','Insulin']
+columns_to_plot = ['age','hypertension','heart_disease','bmi','HbA1c_level','blood_glucose_level','smoking_history_encoded','gender_encoded','Pregnancies','Insulin']
 
-# for columns in (columns_to_plot):
-#     sns.histplot(handled_data[columns] , kde=True)
-#     plt.title(f'Histogram of {columns}')
-#     plt.show()
+for columns in (columns_to_plot):
+    sns.histplot(handled_data[columns] , kde=True)
+    plt.title(f'Histogram of {columns}')
+    plt.show()
 
 print("Checking if data is empty or not: ",handled_data.isna().sum())
 
@@ -158,20 +164,19 @@ age = int(input("Enter your age: "))
 hypertension = int(input("Do you have hypertension(enter 1 if yes else enter 0): "))
 heartdisease = int(input("Do you have heartdisease(enter 1 if yes else enter 0): "))
 bmi = float(input("Enter your bmi: "))
-Haemoglobin = float(input("Enter you Hb: "))
+Haemoglobin = float(input("Enter you Hb(Hemoglobin A1c): "))
 glucose = int(input("Enter your bllood_glucose_level"))
 pregnancy = int(input("How many pregnancies you had? : "))
-insulin = int(input("Enter your insulin level: "))
+insulin = int(input("Enter your insulin level(mu U/ml)): "))
 
 testing_data = pd.DataFrame([[age,hypertension,heartdisease, bmi, Haemoglobin, glucose,smoking, gender,  pregnancy, insulin]],
                         columns=['age','hypertension','heart_disease','bmi','HbA1c_level', 'blood_glucose_level', 'smoking_history_encoded', 'gender_encoded','Pregnancies', 'Insulin'])
 
 tested_data = rc.predict_proba(testing_data)[:,1]
-if tested_data[0]*100<50:
+if tested_data[0]*100<70:
       print("Person is not diabetic")
 else:
       print("Person is diabetic")
 print("Prediction that the person is diabetic is: ",tested_data[0]*100)
 
-
-#Data is handled properly and task is completed
+#Outcome Generated,Task Completed 
