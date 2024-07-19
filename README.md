@@ -19,11 +19,12 @@ Which will be useful in future also.</p>
 
 <h4>View our python file for better interpretation</h4>
 
-<h2>Changes we are going to make in the project are as follows:</h2>
+<h2>Key points for prediction of outcome</h2>
 <h3>Handling data properly</h3>
 <ol>
-  <li>Merging more than one column of datasets for more accuracy.</li>
+  <li>Merging column of dataset for more accuracy and new parameters introduced.</li>
   <li>Then again drop out some features and test the code.</li>
-  <li>The code uploaded right now has 99.66% efficiency (more features dropped out).</li>
-  <li>So introducing more features again.</li>
+  <li>If you drop out relevant data and accuracy is high -> no point cause relevant data is vanished.</li>
+  <li>Drop out features statistically.</li>
+  <li>Search for best fit parameters in the model(RandomForest in this case)</li>
 </ol>
