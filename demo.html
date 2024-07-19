@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sticky Nav with Section and Aside</title>
+    <link rel="stylesheet" href="style.css"> <!-- Link to your CSS file -->
+</head>
+<body>
+
+<header>
+    <h1 class="head">Diabetes Prediction</h1>
+</header>
+
+<nav id="navbar">
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+</nav>
+
+<div class="content">
+   
+    <section>
+        <div class="container">       
+            <form id="diabetesForm">
+                <h1>Diabetes Prediction Form</h1>
+                <label for="gender">Gender:</label>
+                <select id="gender" name="gender" required>
+                    <option value="">Select</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                </select><br>
+                <label for="smoking">Smoking:</label>
+                <select id="smoking" name="smoking" required>
+                    <option value="">Select</option>
+                    <option value="0">0 -no info</option>
+                    <option value="1">1 -never</option>
+                    <option value="2">2 -former</option>
+                    <option value="3">3 -not current</option>
+                    <option value="4">4 -current</option>
+                    <option value="5">5 -ever</option>
+                </select><br>
+                
+                <label for="age">Age:</label>
+                <input type="number" id="age" name="age" required placeholder="Enter your age"><br>
+                <label for="hypertension">Hypertension:</label>
+                <select id="hypertension" name="hypertension" required>
+                    <option value="">Select</option>
+                    <option value="0">0 -no</option>
+                    <option value="1">1 -yes</option>
+                    </select>
+               
+                
+                <label for="Heart Disease">Heart Disease:</label>
+                <select id="Heart Disease" name="Heart Disease" required>
+                    <option value="">Select</option>
+                    <option value="0">0 -no</option>
+                    <option value="1">1 -yes</option>
+                    </select>
+                
+                <label for="bmi">BMI:</label>
+                <input type="number" step="any" id="bmi" name="bmi" required placeholder="Enter your bmi"><br>
+                <label for="haemoglobin">Haemoglobin:</label>
+                <input type="number" id="haemoglobin" name="haemoglobin" required placeholder="Enter your Haemoglobin"><br>
+                <label for="glucose">Glucose Level:</label>
+                <input type="number" id="glucose" name="glucose" required placeholder="Enter your blood glucose level"><br>
+                <label for="pregnancy">Pregnancy:</label>
+                <input type="number" id="pregnancy" name="pregnancy" required placeholder="How many pregnancies you had?"><br>
+                <label for="insulin">Insulin Level:</label>
+                <input type="number" id="insulin" name="insulin" required placeholder="Enter Your Insulin Level(mu u/ml):"><br>
+                <button type="submit">Predict</button><br><br>
+            </form>
+            <div id="predictionResult">
+                <!-- Prediction result will be displayed here -->
+            </div>
+        </div>
+       
+        <!-- Add more content specific to this section -->
+    </section>
+    
+    <aside>
+        <h2>Aside Section</h2>
+        <p>This is the aside content which can contain additional information, links, ads, etc.</p>
+        <!-- Add more content specific to this aside -->
+    </aside>
+</div>
+
+<footer>
+    <p>By:</p>
+    <p>Nandini Deshmukh</p>
+    <p>Gayatri Deshpande</p>
+</footer>
+
+</body>
+</html>
