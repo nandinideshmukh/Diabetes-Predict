@@ -173,7 +173,7 @@ testing_data = pd.DataFrame([[age,hypertension,heartdisease, bmi, Haemoglobin, g
                         columns=['age','hypertension','heart_disease','bmi','HbA1c_level', 'blood_glucose_level', 'smoking_history_encoded', 'gender_encoded','Pregnancies', 'Insulin'])
 
 tested_data = rc.predict_proba(testing_data)[:,1]
-if tested_data[0]*100<70:
+if tested_data[0]*100<75:
       print("Person is not diabetic")
 else:
       print("Person is diabetic")
