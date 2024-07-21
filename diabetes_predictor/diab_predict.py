@@ -12,11 +12,10 @@ import joblib
 data = pd.read_csv("diabetes_prediction_dataset.csv")
 data2 = pd.read_csv("diabetes (1).csv")
 
-# data2.drop(['Age'],inplace=True,axis=1)
+#after studying co - relation of data 
 data2.drop(['Outcome'],inplace=True,axis=1)
 data2.drop(['BMI'],inplace=True,axis=1)
 data2.drop(['DiabetesPedigreeFunction'],inplace=True,axis=1)
-#data2.drop(['Glucose'],inplace=True,axis=1)
 
 #to check if there are any missing values in the dataset
 sum = data.isnull().sum()
@@ -40,14 +39,6 @@ data.drop(['smoking_history','gender'] , inplace=True , axis=1)
 data2.drop(['BloodPressure'],inplace=True,axis=1)
 
 # print(data)
-
-#this is for feature scaling of blood glucose level which will help us in gradient descent
-# print(data['blood_glucose_level'].mean())
-# max = (data['blood_glucose_level']).max()
-
-# data ['new_bgl'] = ((data['blood_glucose_level']-138.05)/max)*100
-
-# del data['blood_glucose_level']
 
 print(data.shape)
 print(data2.shape)
@@ -183,4 +174,4 @@ else:
       print("Person is diabetic")
 print("Prediction that the person is diabetic is: ",tested_data[0]*100)
 
-#Outcome Generated,Task Completed 
+#Outcome Generated with ~99.6% accuracy 
