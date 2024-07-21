@@ -11,20 +11,18 @@ Which will be useful in future also.</p>
 <li>Train and test</li>
 <li>Predict</li></ol>
 <p>Usage of Random Forest in this project.</p>
-<p>Ordinal encoding for input parameters.</p>
-<p>Feature scaling will help in calculating the gradient descent and will help in cost function analysis too.<p>
-<p>Next step was to too collect more data as it will solve real world problem and not technical only. It will also give more parametres for diabetes prediction </p>
+<p>Collect more data as it will solve real world problem and not technical only. It will also give more parametres for diabetes prediction </p>
 <p>Merging collected data to previous data and handled missing values.</p>
 <p>Plotting histograms and eliminating features based on that graph.</p>
-
-<h4>View our python file for better interpretation</h4>
 
 <h2>Key points for prediction of outcome</h2>
 <h3>Handling data properly</h3>
 <ol>
+  <li>Use features which the user understands.</li>
   <li>Merging column of dataset for more accuracy and new parameters introduced.</li>
   <li>Then again drop out some features and test the code.</li>
   <li>If you drop out relevant data and accuracy is high -> no point cause relevant data is vanished.</li>
   <li>Drop out features statistically.</li>
   <li>Search for best fit parameters in the model(RandomForest in this case)</li>
 </ol>
+<h4>View our python file for better interpretation</h4>
