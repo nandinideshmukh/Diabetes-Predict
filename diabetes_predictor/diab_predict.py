@@ -88,7 +88,6 @@ plt.show()
 
 #parameters that affect the count too much can be given more importance in the data
 #use different plots so that there is no overlapping and better understanding
-#based on these results , elimination of features
 
 columns_to_plot = ['age','hypertension','heart_disease','bmi','HbA1c_level','blood_glucose_level','smoking_history_encoded','gender_encoded','Pregnancies','Insulin']
 
