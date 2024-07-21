@@ -6,6 +6,7 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import train_test_split,GridSearchCV
 from sklearn.preprocessing import OrdinalEncoder
 from sklearn.metrics import roc_curve,auc,accuracy_score
+import joblib
 
 #uploading the dataset
 data = pd.read_csv("diabetes_prediction_dataset.csv")
@@ -84,8 +85,8 @@ sns.heatmap(data3.corr(),annot=True)
 plt.title("Data 3 co-relation")
 plt.plot()
 
-#useful feature-selection
-#pregnancy is a major feature for this
+# #useful feature-selection
+# #pregnancy is a major feature for this
 sns.heatmap(data2.corr(),annot=True)
 plt.title("Data 2 co -relation")
 plt.show()
@@ -93,10 +94,6 @@ plt.show()
 sns.heatmap(handled_data.corr(),annot=True)
 plt.title("Handled data co-relation")
 plt.show()
-
-# #this may tell us to use logistic regression and feature selection too
-# sns.pairplot(data=handled_data,x=['age','hypertension','heart_disease','bmi','HbA1c_level','new_bgl','smoking_history_encoded','gender_encoded','Pregnancies','Insulin','DiabetesPedigreeFunction'],y=['diabetes'],kde=True)
-# plt.show()
 
 #parameters that affect the count too much can be given more importance in the data
 #use different plots so that there is no overlapping and better understanding
@@ -136,6 +133,13 @@ X_train ,X_test , Y_train,Y_test = train_test_split(handled_data.drop('diabetes'
 rc = RandomForestClassifier(n_estimators=100,max_depth=None,min_samples_leaf=1,min_samples_split=3)
 rc.fit(X_train,Y_train)
 # fitted = fitting.best_estimator_
+
+try:
+    joblib.dump(rc, 'models/model.pkl')
+    print("Model saved successfully as 'model.pkl'")
+except Exception as e:
+    print(f"Error saving model: {e}")
+
 
 pred1 = rc.predict_proba(X_test)[:, 1]
 
