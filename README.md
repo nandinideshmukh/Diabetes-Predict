@@ -5,7 +5,7 @@ Which will be useful in future also.</p>
 <br><br>
 <ol>The steps are as follows:
 <li>Collecting data</li>
-<li>Use parameters </li>
+<li>Use multiple parameters </li>
 <li>Data pre-processing (helping us which model to use)</li>
 <li>Random Forest is efficient algorithm for diabetes prediction.</li>
 <li>Train and test</li>
