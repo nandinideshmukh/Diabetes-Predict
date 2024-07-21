@@ -1,0 +1,135 @@
+body{
+    margin:0px;
+    padding:0px;
+}
+
+#nav-bar {
+    position:sticky;
+    top: 0;
+    z-index: 10;
+    height: 40px;
+  
+}
+.navbar {
+    background-image: linear-gradient(to right,#a517ba,#5f1782);
+    padding: 0 !important;
+}
+.navbar-nav li {
+    padding: 0 10px;
+
+}
+.navbar-nav li a{
+    color:#fff !important;
+}
+#banner{
+    background-image: linear-gradient(to right,#a517ba,#5f1782);
+   padding-top: 5%;
+   color:#fff;
+   
+   
+}
+.promo-title{
+    font-size: 40px;
+    font-weight: 600;
+    margin-top: 100px;
+}
+
+.navbar-toggler{
+    outline:none !important;
+   
+}
+.bottom {
+    width:100%
+   
+}
+#services {
+    padding:80px,0;
+}
+footer{
+    background-color: #5f1782;
+    color:#fff;
+    height: 300px;
+    /* padding-top: 80px; */
+    padding-bottom:80px;
+}
+
+  
+  .container {
+    width: 80%;
+    margin: 0 auto;
+  }
+  
+  .footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .footer-section {
+    flex: 1;
+    margin-bottom: 20px;
+  }
+  
+  .footer-section h3 {
+    color: #4CAF50;
+    font-size: 1.5em;
+    margin-bottom: 15px;
+  }
+  
+  .footer-section p,
+  .footer-section ul {
+    font-size: 0.9em;
+    line-height: 1.8;
+  }
+  
+  .footer-section ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .footer-section ul li {
+    margin-bottom: 10px;
+  }
+  
+  .footer-section ul li i {
+    margin-right: 10px;
+  }
+  
+  .footer-section.links ul li {
+    display: inline-block;
+    margin-right: 10px;
+  }
+  
+  .footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .footer-bottom p {
+    font-size: 0.8em;
+  }
+  
+  .footer-bottom p a {
+    color: #4CAF50;
+    text-decoration: none;
+  }
+  
+  .footer-bottom p a:hover {
+    text-decoration: underline;
+  }
+  .human{
+    height: 200px;
+    width: 200px;
+  }
+  .graphic{
+    padding-bottom: 10px;
+    padding-left: 100px;
+   
+
+    width: 500px;
+    height: 500px;
+  }
+  .logo{
+    height:100 px;
+    width: 100px;
+  }
